@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "ttf2woff": "ttf2woff"
+  },
+  "dependencies": {
+    "ttf2woff": "^2.0.2"
+  }
+}
