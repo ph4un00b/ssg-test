@@ -15,22 +15,22 @@ export default {}
 
     @font-face {
       font-family: "Major Mono Display";
-      src: url("fonts/MajorMonoDisplay-Regular.ttf") format('truetype');
-      src: url("fonts/MajorMonoDisplay-Regular.woff") format('woff');
-      /* src: url("fonts/MajorMonoDisplay-Regular.eot");
-      src: url("fonts/MajorMonoDisplay-Regular.eot");
-      src: url("/fonts/MajorMonoDisplay-Regular.eot?#iefix") format('embedded-opentype'),
-        url("fonts/MajorMonoDisplay-Regular.woff2") format('woff2'),
-        url("fonts/MajorMonoDisplay-Regular.woff") format('woff'),
-        url("fonts/MajorMonoDisplay-Regular.ttf") format('truetype'); */
+      src: url("~/assets/fonts/MajorMonoDisplay-Regular.ttf") format('truetype');
+      src: url("~/assets/fonts/MajorMonoDisplay-Regular.woff") format('woff');
+      /* src: url("~/assets/fonts/MajorMonoDisplay-Regular.eot");
+      src: url("~/assets/fonts/MajorMonoDisplay-Regular.eot");
+      src: url("/~/assets/fonts/MajorMonoDisplay-Regular.eot?#iefix") format('embedded-opentype'),
+        url("~/assets/fonts/MajorMonoDisplay-Regular.woff2") format('woff2'),
+        url("~/assets/fonts/MajorMonoDisplay-Regular.woff") format('woff'),
+        url("~/assets/fonts/MajorMonoDisplay-Regular.ttf") format('truetype'); */
       font-weight: 400;
       font-style: normal;
     }
 
     @font-face {
       font-family: "Roboto Slab";
-      src: url("fonts/RobotoSlab-Regular.ttf") format('truetype');
-      src: url("fonts/RobotoSlab-Regular.woff") format('woff');
+      src: url("~/assets/fonts/RobotoSlab-Regular.ttf") format('truetype');
+      src: url("~/assets/fonts/RobotoSlab-Regular.woff") format('woff');
       font-weight: 400;
       font-style: normal;
     }
