@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to Firebase Hosting</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </noscript>
+
   <style media="screen">
     /* Roboto regular */
 
@@ -122,6 +128,10 @@
       padding: 0;
     }
 
+    .card {
+      background-color: black;
+    }
+
     @media (max-width: 600px) {
 
       body,
@@ -133,572 +143,10 @@
     }
   </style>
 
-  <style>
-    /*!
-* Bootstrap v5.0.2 (https://getbootstrap.com/)
-* Copyright 2011-2021 The Bootstrap Authors
-* Copyright 2011-2021 Twitter, Inc.
-* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-*/
-
-    /* // Configuration
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "utilities";
-
-// Layout & components
-// @import "root";
-// @import "reboot";
-// @import "type";
-// @import "images";
-// @import "containers";
-// @import "grid";
-// @import "tables";
-// @import "forms";
-@import "buttons";
-// @import "transitions";
-// @import "dropdown";
-@import "button-group";
-// @import "nav";
-// @import "navbar";
-// @import "card";
-// @import "accordion";
-// @import "breadcrumb";
-// @import "pagination";
-// @import "badge";
-// @import "alert";
-// @import "progress";
-// @import "list-group";
-// @import "close";
-// @import "toasts";
-// @import "modal";
-// @import "tooltip";
-// @import "popover";
-// @import "carousel";
-// @import "spinners";
-// @import "offcanvas";
-
-// Helpers
-@import "helpers";
-
-// Utilities
-// @import "utilities/api";
-// scss-docs-end import-stack */
-
-    /*!
-* Bootstrap v5.0.2 (https://getbootstrap.com/)
-* Copyright 2011-2021 The Bootstrap Authors
-* Copyright 2011-2021 Twitter, Inc.
-* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-*/
-    .btn {
-      display: inline-block;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #212529;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor: pointer;
-      user-select: none;
-      background-color: transparent;
-      border: 1px solid transparent;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      border-radius: 0.25rem;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .btn {
-        transition: none;
-      }
-    }
-
-    .btn:hover {
-      color: #212529;
-    }
-
-    .btn-check:focus+.btn,
-    .btn:focus {
-      outline: 0;
-      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    }
-
-    .btn:disabled,
-    .btn.disabled,
-    fieldset:disabled .btn {
-      pointer-events: none;
-      opacity: 0.65;
-    }
-
-    .btn-default {
-      color: #000;
-      background-color: #f8f9fa;
-      border-color: #f8f9fa;
-    }
-
-    .btn-default:hover {
-      color: #000;
-      background-color: #f9fafb;
-      border-color: #f9fafb;
-    }
-
-    .btn-check:focus+.btn-default,
-    .btn-default:focus {
-      color: #000;
-      background-color: #f9fafb;
-      border-color: #f9fafb;
-      box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-    }
-
-    .btn-check:checked+.btn-default,
-    .btn-check:active+.btn-default,
-    .btn-default:active,
-    .btn-default.active,
-    .show>.btn-default.dropdown-toggle {
-      color: #000;
-      background-color: #f9fafb;
-      border-color: #f9fafb;
-    }
-
-    .btn-check:checked+.btn-default:focus,
-    .btn-check:active+.btn-default:focus,
-    .btn-default:active:focus,
-    .btn-default.active:focus,
-    .show>.btn-default.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-    }
-
-    .btn-default:disabled,
-    .btn-default.disabled {
-      color: #000;
-      background-color: #f8f9fa;
-      border-color: #f8f9fa;
-    }
-
-    .btn-alt {
-      color: #fff;
-      background-color: #212529;
-      border-color: #212529;
-    }
-
-    .btn-alt:hover {
-      color: #fff;
-      background-color: #1c1f23;
-      border-color: #1a1e21;
-    }
-
-    .btn-check:focus+.btn-alt,
-    .btn-alt:focus {
-      color: #fff;
-      background-color: #1c1f23;
-      border-color: #1a1e21;
-      box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-    }
-
-    .btn-check:checked+.btn-alt,
-    .btn-check:active+.btn-alt,
-    .btn-alt:active,
-    .btn-alt.active,
-    .show>.btn-alt.dropdown-toggle {
-      color: #fff;
-      background-color: #1a1e21;
-      border-color: #191c1f;
-    }
-
-    .btn-check:checked+.btn-alt:focus,
-    .btn-check:active+.btn-alt:focus,
-    .btn-alt:active:focus,
-    .btn-alt.active:focus,
-    .show>.btn-alt.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-    }
-
-    .btn-alt:disabled,
-    .btn-alt.disabled {
-      color: #fff;
-      background-color: #212529;
-      border-color: #212529;
-    }
-
-    .btn-outline-default {
-      color: #f8f9fa;
-      border-color: #f8f9fa;
-    }
-
-    .btn-outline-default:hover {
-      color: #000;
-      background-color: #f8f9fa;
-      border-color: #f8f9fa;
-    }
-
-    .btn-check:focus+.btn-outline-default,
-    .btn-outline-default:focus {
-      box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
-    }
-
-    .btn-check:checked+.btn-outline-default,
-    .btn-check:active+.btn-outline-default,
-    .btn-outline-default:active,
-    .btn-outline-default.active,
-    .btn-outline-default.dropdown-toggle.show {
-      color: #000;
-      background-color: #f8f9fa;
-      border-color: #f8f9fa;
-    }
-
-    .btn-check:checked+.btn-outline-default:focus,
-    .btn-check:active+.btn-outline-default:focus,
-    .btn-outline-default:active:focus,
-    .btn-outline-default.active:focus,
-    .btn-outline-default.dropdown-toggle.show:focus {
-      box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
-    }
-
-    .btn-outline-default:disabled,
-    .btn-outline-default.disabled {
-      color: #f8f9fa;
-      background-color: transparent;
-    }
-
-    .btn-outline-alt {
-      color: #212529;
-      border-color: #212529;
-    }
-
-    .btn-outline-alt:hover {
-      color: #fff;
-      background-color: #212529;
-      border-color: #212529;
-    }
-
-    .btn-check:focus+.btn-outline-alt,
-    .btn-outline-alt:focus {
-      box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
-    }
-
-    .btn-check:checked+.btn-outline-alt,
-    .btn-check:active+.btn-outline-alt,
-    .btn-outline-alt:active,
-    .btn-outline-alt.active,
-    .btn-outline-alt.dropdown-toggle.show {
-      color: #fff;
-      background-color: #212529;
-      border-color: #212529;
-    }
-
-    .btn-check:checked+.btn-outline-alt:focus,
-    .btn-check:active+.btn-outline-alt:focus,
-    .btn-outline-alt:active:focus,
-    .btn-outline-alt.active:focus,
-    .btn-outline-alt.dropdown-toggle.show:focus {
-      box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
-    }
-
-    .btn-outline-alt:disabled,
-    .btn-outline-alt.disabled {
-      color: #212529;
-      background-color: transparent;
-    }
-
-    .btn-link {
-      font-weight: 400;
-      color: #0d6efd;
-      text-decoration: underline;
-    }
-
-    .btn-link:hover {
-      color: #0a58ca;
-    }
-
-    .btn-link:disabled,
-    .btn-link.disabled {
-      color: #6c757d;
-    }
-
-    .btn-lg,
-    .btn-group-lg>.btn {
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      border-radius: 0.3rem;
-    }
-
-    .btn-sm,
-    .btn-group-sm>.btn {
-      padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
-      border-radius: 0.2rem;
-    }
-
-    .btn-group,
-    .btn-group-vertical {
-      position: relative;
-      display: inline-flex;
-      vertical-align: middle;
-    }
-
-    .btn-group>.btn,
-    .btn-group-vertical>.btn {
-      position: relative;
-      flex: 1 1 auto;
-    }
-
-    .btn-group>.btn-check:checked+.btn,
-    .btn-group>.btn-check:focus+.btn,
-    .btn-group>.btn:hover,
-    .btn-group>.btn:focus,
-    .btn-group>.btn:active,
-    .btn-group>.btn.active,
-    .btn-group-vertical>.btn-check:checked+.btn,
-    .btn-group-vertical>.btn-check:focus+.btn,
-    .btn-group-vertical>.btn:hover,
-    .btn-group-vertical>.btn:focus,
-    .btn-group-vertical>.btn:active,
-    .btn-group-vertical>.btn.active {
-      z-index: 1;
-    }
-
-    .btn-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-
-    .btn-toolbar .input-group {
-      width: auto;
-    }
-
-    .btn-group>.btn:not(:first-child),
-    .btn-group>.btn-group:not(:first-child) {
-      margin-left: -1px;
-    }
-
-    .btn-group>.btn:not(:last-child):not(.dropdown-toggle),
-    .btn-group>.btn-group:not(:last-child)>.btn {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .btn-group>.btn:nth-child(n+3),
-    .btn-group> :not(.btn-check)+.btn,
-    .btn-group>.btn-group:not(:first-child)>.btn {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .dropdown-toggle-split {
-      padding-right: 0.5625rem;
-      padding-left: 0.5625rem;
-    }
-
-    .dropdown-toggle-split::after,
-    .dropup .dropdown-toggle-split::after,
-    .dropend .dropdown-toggle-split::after {
-      margin-left: 0;
-    }
-
-    .dropstart .dropdown-toggle-split::before {
-      margin-right: 0;
-    }
-
-    .btn-sm+.dropdown-toggle-split,
-    .btn-group-sm>.btn+.dropdown-toggle-split {
-      padding-right: 0.375rem;
-      padding-left: 0.375rem;
-    }
-
-    .btn-lg+.dropdown-toggle-split,
-    .btn-group-lg>.btn+.dropdown-toggle-split {
-      padding-right: 0.75rem;
-      padding-left: 0.75rem;
-    }
-
-    .btn-group-vertical {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .btn-group-vertical>.btn,
-    .btn-group-vertical>.btn-group {
-      width: 100%;
-    }
-
-    .btn-group-vertical>.btn:not(:first-child),
-    .btn-group-vertical>.btn-group:not(:first-child) {
-      margin-top: -1px;
-    }
-
-    .btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle),
-    .btn-group-vertical>.btn-group:not(:last-child)>.btn {
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .btn-group-vertical>.btn~.btn,
-    .btn-group-vertical>.btn-group:not(:first-child)>.btn {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-
-    .clearfix::after {
-      display: block;
-      clear: both;
-      content: "";
-    }
-
-    .link-default {
-      color: #f8f9fa;
-    }
-
-    .link-default:hover,
-    .link-default:focus {
-      color: #f9fafb;
-    }
-
-    .link-alt {
-      color: #212529;
-    }
-
-    .link-alt:hover,
-    .link-alt:focus {
-      color: #1a1e21;
-    }
-
-    .ratio {
-      position: relative;
-      width: 100%;
-    }
-
-    .ratio::before {
-      display: block;
-      padding-top: var(--bs-aspect-ratio);
-      content: "";
-    }
-
-    .ratio>* {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .ratio-1x1 {
-      --bs-aspect-ratio: 100%;
-    }
-
-    .ratio-4x3 {
-      --bs-aspect-ratio: calc(3 / 4 * 100%);
-    }
-
-    .ratio-16x9 {
-      --bs-aspect-ratio: calc(9 / 16 * 100%);
-    }
-
-    .ratio-21x9 {
-      --bs-aspect-ratio: calc(9 / 21 * 100%);
-    }
-
-    .fixed-top {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-    }
-
-    .fixed-bottom {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1030;
-    }
-
-    .sticky-top {
-      position: sticky;
-      top: 0;
-      z-index: 1020;
-    }
-
-    @media (min-width: 576px) {
-      .sticky-sm-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .sticky-md-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .sticky-lg-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .sticky-xl-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-
-    @media (min-width: 1400px) {
-      .sticky-xxl-top {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-
-    .visually-hidden,
-    .visually-hidden-focusable:not(:focus):not(:focus-within) {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-
-    .stretched-link::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      content: "";
-    }
-
-    .text-truncate {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    /*# sourceMappingURL=jamon.css.map */
-  </style>
 </head>
 
 <body>
-  <main>
+  <main class="container-fluid">
     <h1>Welcome</h1>
     <button>Toggle!</button>
     <div class="btn-group" role="group" aria-label="Basic example">
@@ -707,13 +155,66 @@
       <button type="button" class="btn btn-outline-default">Right</button>
     </div>
     <p>Current mode is: <output>system default</output></p>
+
+    <div class="row">
+      <section id="parties" class="col">
+        <h1>Events</h1>
+        <div v-for="event in parties" class="card">
+          <img :src="event.metadata.main_image.imgix_url + '?w=600'" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">{{event.title}}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col">
+        2 of 3
+      </div>
+      <div class="col">
+        3 of 3
+      </div>
+    </div>
+
+
     <footer>
       Powered by simple html
     </footer>
   </main>
+  <!-- development version, includes helpful console warnings -->
+  <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.js" ;>
+  </script>
   <script>
-    var darkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    var toggle = function () {
+    const json_parties = "https://api.cosmicjs.com/v2/buckets/tulum/objects?pretty=true&query=%7B%22type%22%3A%22parties%22%7D&limit=20&props=slug,title,content,metadata"
+
+    const parties = new Vue({
+      el: "#parties",
+      created() {
+        fetch(json_parties)
+          .then(res => res.json())
+          .then(res => {
+            this.parties = res.objects;
+          });
+      },
+      data: {
+        parties: []
+      }
+    });
+  </script>
+  <script>
+    let darkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const toggle = function () {
       document.querySelector('html').classList.remove('theme-default');
 
       if (darkMode) {
