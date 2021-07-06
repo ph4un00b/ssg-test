@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to Firebase Hosting</title>
+  <!-- party theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
     onload="this.media='all'">
@@ -43,12 +48,33 @@
     }
 
     :root {
-      --ff-base: var(--light, "Major Mono Display") var(--dark, "Major Mono Display");
-      --ff-alt: var(--light, "Roboto Slab") var(--dark, "Roboto Slab");
-      --text: var(--light, black) var(--dark, whitesmoke);
+      --main-color: var(--light, hsla(0, 0%, 100%, .8)) var(--dark, hsla(0, 0%, 100%, .8));
+      --second-color: var(--light, #c5fbee) var(--dark, hsla(0, 0%, 100%, .8));
+      --third-color: var(--light, #f0fda7) var(--dark, hsla(0, 0%, 100%, .8));
+
+      --ff-main: var(--light, "Nunito") var(--dark, "Major Mono Display");
+      --ff-second: var(--light, "Overpass") var(--dark, "Roboto Slab");
+      --ff-third: var(--light, "Wremena") var(--dark, "Roboto Slab");
+
+      --ff-base: var(--light, "Nunito") var(--dark, "Major Mono Display");
+      --ff-alt: var(--light, "Overpass") var(--dark, "Roboto Slab");
+
+      --text: var(--light, var(--main-color)) var(--dark, var(--main-color));
+
+      --h1: var(--light, var(--main-color)) var(--dark, var(--main-color));
+      --h2: var(--light, var(--main-color)) var(--dark, var(--main-color));
+      --h3: var(--light, #61eac8) var(--dark, #c9ffe7);
+      --h4: var(--light, var(--third-color)) var(--dark, var(--main-color));
+      --h5: var(--light, var(--third-color)) var(--dark, var(--main-color));
+      --h5-transform: var(--light, uppercase) var(--dark, lowercase);
+
+
+      --card-bg: var(--light, #30303e) var(--dark, black);
+      --card-footer: var(--light, var(--third-color)) var(--dark, var(--main-color));
+
       --title-base: var(--light, black) var(--dark, #c5fbee);
-      --title-alt: var(--light, black) var(--dark, whitesmoke);
-      --bg: var(--light, orchid) var(--dark, radial-gradient(circle at 30% 20%, #5c5c5f -70%, #0a0a0a 35%));
+      --title-alt: var(--light, black) var(--dark, var(--main-color));
+      --bg: var(--light, linear-gradient(#1e1e2d, #1e1e24)) var(--dark, radial-gradient(circle at 30% 20%, #5c5c5f -70%, #0a0a0a 35%));
     }
 
     @font-face {
@@ -74,18 +100,70 @@
     }
 
     h1 {
+      -webkit-font-smoothing: antialiased;
       font-family: var(--ff-base);
-      color: var(--title-alt);
-      word-spacing: 1px;
-      text-align: center !important;
+      color: var(--h1);
+      text-align: center;
       box-sizing: border-box;
       line-height: 1.05;
-      text-transform: uppercase;
       font-size: 1.4em;
-      margin-bottom: .8px;
+      font-weight: bolder;
+      margin-bottom: 0.8px;
       margin-top: 8px;
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--h2);
+      font-family: var(--ff-second);
+      -webkit-font-smoothing: antialiased;
+      direction: ltr;
+      text-align: center;
+      -webkit-box-direction: normal;
+      word-wrap: break-word;
+      box-sizing: border-box;
+      margin-top: 0;
+      font-size: 1.4375rem;
+      font-weight: 400;
+      line-height: 1.4em;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+
+    h3 {
+      font-family: var(--ff-third);
+      color: var(--h3);
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-style: normal;
       font-weight: 700;
+      text-transform: capitalize;
+      line-height: 2.2rem;
+      font-size: 1.3rem;
+    }
+
+    h4 {
+      color: var(--h4);
+    }
+
+    h5 {
+      color: var(--h5);
+      text-align: center;
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-family: var(--ff-main);
+      line-height: 140%;
+      font-style: normal;
+      font-weight: 900;
+      text-transform: var(--h5-transform);
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
     }
 
     main {
@@ -129,7 +207,42 @@
     }
 
     .card {
-      background-color: black;
+      background-color: var(--card-bg);
+      margin-bottom: 5rem;
+    }
+
+    .card-footer {
+      word-wrap: break-word;
+      text-align: center !important;
+      /* font-family: Overpass; */
+      line-height: 140%;
+      font-style: normal;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--card-footer);
+      box-sizing: border-box;
+      font-size: 80%;
+      font-weight: 400;
+    }
+
+    .card-title {
+      font-size: 1.4375rem;
+    }
+
+    .card-text {
+      font-family: var(--ff-main);
+    }
+
+    .text-third {
+      color: var(--third-color);
+    }
+
+    .text-second {
+      color: var(--second-color);
+    }
+
+    .ff-main {
+      font-family: var(--ff-main);
     }
 
     @media (max-width: 600px) {
@@ -143,30 +256,91 @@
     }
   </style>
 
+  <style>
+    * {
+      /* box-shadow: inset 0 0 5px pink; */
+    }
+  </style>
 </head>
 
 <body>
   <main class="container-fluid">
-    <h1>Welcome</h1>
-    <button>Toggle!</button>
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-outline-default">Left</button>
-      <button type="button" class="btn btn-outline-default">Middle</button>
-      <button type="button" class="btn btn-outline-default">Right</button>
+    <div class="row">
+      <section>
+        <h1>Welcome</h1>
+        <button>Toggle theme!</button>
+        <p class="text-third">Current mode is: <output>system default</output></p>
+      </section>
     </div>
-    <p>Current mode is: <output>system default</output></p>
 
     <div class="row">
-      <section id="parties" class="col">
-        <h1>Events</h1>
-        <div v-for="event in parties" class="card">
-          <img :src="event.metadata.main_image.imgix_url + '?w=600'" class="card-img-top" alt="...">
+      <section>
+        <h1>World PARTY</h1>
+        <h3>Parties, Nightlife & Techno Music</h3>
+        <h5>THE BEST PARTIES & EVENTS HAPPENING AROUND TULUM</h5>
+      </section>
+
+    </div>
+
+    <div class="row">
+      <section>
+        <div class="card text-white bg-success">
+          <div class="card-img-top">
+            <img style="object-fit: contain; height: 80vw; max-width: 100%; max-height: 100%;" src="404.jpeg" alt="404">
+          </div>
+
           <div class="card-body">
-            <p class="card-text">{{event.title}}</p>
+            <h3 class="card-title">Have Fun</h3>
+            <h5 class="card-subtitle">LIVE THE TULUM EXPERIENCE</h5>
+            <p class="card-text">Tulum, Mexico is a world-wide recognized spot for electronic music parties.
+              Surrounded by
+              impressive landscapes, Tulum congregates the best world DJ's along open minded travelers from all around
+              the
+              globe.
+            </p>
+            <button class="btn btn-dark">join our commnity</button>
+            <div class="card-footer">
+              STAY IN TUNE @ TELEGRAM
+            </div>
           </div>
         </div>
       </section>
     </div>
+
+    <div class="row">
+      <section>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-subtitle">TULUM 2021</h5>
+            <h2 class="card-title">DID YOU KNOW ...</h2>
+            <p class="card-text text-second">The evidence of the first inhabitants of Cobá is recorded between 100 BC.
+              and
+              300 A.D.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="row">
+      <section id="parties">
+        <h1>Events</h1>
+
+        <div v-for="event in parties" class="card" style="height: 100vw">
+          <div class="card-img-top" v-lazy-container="{ selector: 'img', loading: 'loading-spin.svg' }">
+            <img style="object-fit: contain; height: 80vw; max-width: 100%; max-height: 100%;"
+              :data-src="event.metadata.main_image.imgix_url" alt="...">
+            <!-- <img style="object-fit: contain; width: 100%;" :data-src="event.metadata.main_image.imgix_url" alt="..."> -->
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">{{event.title}}</p>
+          </div>
+          <hr>
+        </div>
+      </section>
+    </div>
+
     <div class="row">
       <div class="col">
         1 of 2
@@ -187,16 +361,19 @@
       </div>
     </div>
 
-
     <footer>
       Powered by simple html
     </footer>
   </main>
+
   <!-- development version, includes helpful console warnings -->
-  <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.js" ;>
+  <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.js">
   </script>
+  <script src="//unpkg.com/vue-lazyload/vue-lazyload.js"></script>
   <script>
     const json_parties = "https://api.cosmicjs.com/v2/buckets/tulum/objects?pretty=true&query=%7B%22type%22%3A%22parties%22%7D&limit=20&props=slug,title,content,metadata"
+
+    Vue.use(VueLazyload)
 
     const parties = new Vue({
       el: "#parties",
@@ -211,6 +388,8 @@
         parties: []
       }
     });
+
+
   </script>
   <script>
     let darkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
