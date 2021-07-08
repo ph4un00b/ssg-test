@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'ssr',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -25,6 +25,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/toggle-theme.client.js',
+    '~/plugins/lazy-load.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,10 +34,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-purgecss',
+    // 'nuxt-purgecss',
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    'nuxt-vite'
+    // 'nuxt-vite'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
