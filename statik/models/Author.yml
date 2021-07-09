@@ -1,0 +1,7 @@
+first-name: String
+last-name: String
+email: String
+# IMPORTANT: All field names will have their
+# dashes (-) replaced by underscores (_) when
+# creating the in-memory database. So first-name
+# will become first_name.

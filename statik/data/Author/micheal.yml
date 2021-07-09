@@ -1,0 +1,10 @@
+first-name: Michael
+last-name: Anderson
+email: manderson@somewhere.com
+# Each .yml or .md file in each of those folders will
+# represent an instance of the relevant model, with
+# the file name of the file itself becoming the
+# primary key of that particular instance. So,
+# a file called michael.yml in the data/Author
+# folder will be inserted as an entry whose primary
+# key is michael into the Author in-memory database table.
