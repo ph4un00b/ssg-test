@@ -1,0 +1,3 @@
+{
+  "plugins": [{ "metalsmith-markdown": {} }, { "metalsmith-layouts": {} }]
+}
