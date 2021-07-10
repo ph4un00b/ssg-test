@@ -1,0 +1,72 @@
+        fuego  hugo   jekyll  lektor  metalsmith  next  nuxt  pelican statik  zola    11ty
+runtime node  binary  ruby    python  node        node  node  python  python  binary  node
+install ***   *****   ***     ***     ***         ***   ***   ***     ***     *****   ***
+create  ***   *****   ***     ***     ***         ***   ***   ***     ***     *****   ***
+folders 0+1   8+0     ***     ***     ***         ***   ***   ***     ***     *****   0+1
+
+
+## install:notes
+- whenever you have to deal with extra deps
+- you might encounter low level issues
+- hence a waste of time 
+
+## create:notes
+- directory structure? [zero | fixed]
+- ez to follow along?
+
+
+* fuego  
+[install] 
+node
+npm install -g firebase-tools  
+
+* hugo 
+[install] 
+brew install hugo
+
+* jekyll  
+[install] 
+ruby
+gem install jekyll bundler   
+
+lektor  
+[install] 
+python
+curl -sf https://www.getlektor.com/installer.py | python3 
+
+metalsmith  
+[install]
+node
+package.json {}
+npm install --save-dev metalsmith metalsmith-markdown metalsmith-layouts jstransformer-handlebars   
+
+next  
+[install]
+node
+package.json {}
+npm install next react react-dom
+
+nuxt  
+[install]
+node
+npx create-nuxt-app
+
+pelican  
+[install]
+python
+python -m pip install "pelican[markdown]"
+
+statik  
+[install]
+python
+pip install statik
+
+zola 
+[install]
+brew install zola
+
+11ty
+[install]
+node
+package.json {}
+npm install @11ty/eleventy
